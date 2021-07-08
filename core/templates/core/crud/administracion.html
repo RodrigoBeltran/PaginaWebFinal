@@ -1,0 +1,50 @@
+{% extends 'core/base.html'%}
+
+{% load static %}
+
+{% block title %} administracion {% endblock %}
+
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #264653;">
+        <a href="{% url 'inicio' %}" target="_parent">
+        <img src="{% static 'core/img/CANO_logo.png' %}" alt="logo" width="80px" height="80px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" id="nav">
+            <li class="nav-item  ">
+            <a class="nav-link " href="{% url 'inicio' %}">Inicio </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link " href="{% url 'agregarJuego' %}"> Agregar  Juegos</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Agregar Productos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item " href="{% url 'agregarGabinete' %}"> Agregar Gabinetes</a>
+                <a class="dropdown-item" href="{% url 'agregarProce' %}"> Agregar Procesadores</a>
+                <a class="dropdown-item " href="{% url 'agregarGPU' %}"> Agregar Tarjetas Graficas</a>
+                <a class="dropdown-item " href="{% url 'agregarRams' %}"> Agregar Memorias RAM</a>
+            </div>
+            </li>
+        </ul>
+        </div>
+        </nav>
+    {% endblock %}
+
+{% block content %}
+<br>
+<br>
+ <h1 class="text-center"> ESTAS EN EL APARTADO DE ADMINISTRACION</h1>
+ <br>
+ <br>
+ <br>
+ <br>
+{% load humanize %}
+
+  
+{% endblock %}
